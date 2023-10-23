@@ -44,7 +44,7 @@ spec:
         - |
           cp /home/key-file/key /var &&
           chmod 600 /var/key &&
-          exec mongod --keyFile /var/key --bind_ip_all --replSet rs0
+          exec mongod --auth --keyFile /var/key --bind_ip_all --replSet rs0
         ports:
         - containerPort: 27017
         volumeMounts:
