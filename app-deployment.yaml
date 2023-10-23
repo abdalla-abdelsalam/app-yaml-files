@@ -19,3 +19,20 @@ spec:
         image: us-central1-docker.pkg.dev/abdallahmahdy/images-repository/nodejs
         ports:
         - containerPort: 3000  # Port the container will listen on
+        env:
+        - name: DBuser
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-configmap
+              key: DBuser
+        - name: DBhosts
+          valueFrom:
+            configMapKeyRef:
+              name: mongo-configmap
+              key: DBhosts
+        - name: DBpass
+          valueFrom:
+            secretKeyRef:
+              name: dbpass-secret
+              key: DBpass
+        
