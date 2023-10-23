@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-container
-        image: us-central1-docker.pkg.dev/abdallahmahdy/images-repository/express
+        image: us-central1-docker.pkg.dev/abdallahmahdy/images-repository/nodejs
         ports:
         - containerPort: 3000  # Port the container will listen on
